@@ -1,6 +1,8 @@
 const express = require('express')
 const morgan = require('morgan')
 
+const itemRouter = require('./routes/item.router')
+
 const app = express()
 
 if (process.env.NODE_ENV === 'development') {
@@ -8,10 +10,7 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 app.use(express.json())
-app.use(express.static(`${__dirname}/public`))
 
-app.get('/', (req, res) => {
-  res.send('edofus api')
-})
+app.use('/api/v1/items', itemRouter)
 
 module.exports = app
