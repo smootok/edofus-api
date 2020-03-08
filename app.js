@@ -1,7 +1,7 @@
 const express = require('express')
 const morgan = require('morgan')
 
-const itemRouter = require('./routes/item.router')
+const encyclopediaRouter = require('./routes/encyclopedia.router')
 
 const app = express()
 
@@ -11,6 +11,6 @@ if (process.env.NODE_ENV === 'development') {
 
 app.use(express.json())
 
-app.use('/api/v1/items', itemRouter)
+app.use('/api/v1/encyclopedia', encyclopediaRouter)
 
 module.exports = app

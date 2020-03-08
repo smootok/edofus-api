@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const itemSchema = new mongoose.Schema({
+const equipmentSchema = new mongoose.Schema({
   id: {
     type: Number,
     required: [true, 'A tour must have an ID']
@@ -34,6 +34,6 @@ const itemSchema = new mongoose.Schema({
   }
 })
 
-const Item = mongoose.model('Item', itemSchema)
+const Equipment = mongoose.model('Equipment', equipmentSchema)
 
-module.exports = Item
+module.exports = Equipment
