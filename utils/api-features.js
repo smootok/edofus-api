@@ -7,10 +7,6 @@ class APIFeatures {
   filter () {
     const queryObj = { ...this.queryString }
 
-    if (queryObj.name === '') {
-      delete queryObj.name
-    }
-
     if (queryObj.name) {
       queryObj.name = { $regex: queryObj.name, $options: 'i' }
     }

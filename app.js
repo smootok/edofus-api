@@ -1,7 +1,7 @@
 const express = require('express')
 const morgan = require('morgan')
 
-const encyclopediaRouter = require('./routes/encyclopedia.router')
+const equipmentRouter = require('./routes/equipment.router')
 
 const app = express()
 
@@ -21,6 +21,6 @@ app.use((req, res, next) => {
 app.use(express.static('public'))
 app.use(express.json())
 
-app.use('/api/v1/encyclopedia', encyclopediaRouter)
+app.use('/api/v1/encyclopedia/equipment', equipmentRouter)
 
 module.exports = app

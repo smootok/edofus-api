@@ -22,3 +22,19 @@ exports.getEquipment = async (req, res) => {
     })
   }
 }
+
+exports.getEquipmentTypes = async (req, res) => {
+  try {
+    const types = await Equipment.find().distinct('type')
+    return res.status(200).json({
+      status: 'success',
+      results: types.length,
+      data: types
+    })
+  } catch (err) {
+    res.status(404).json({
+      status: 'fail',
+      message: err
+    })
+  }
+}
