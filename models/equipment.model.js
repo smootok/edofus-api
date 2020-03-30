@@ -7,16 +7,16 @@ const equipmentSchema = new mongoose.Schema({
   },
   url: {
     type: String,
-    required: [true, 'An item must have a name'],
+    required: [true, 'Equipment must have a name'],
     trim: true
   },
   name: {
     type: String,
-    required: [true, 'An item must have a name']
+    required: [true, 'Equipment must have a name']
   },
   level: {
     type: Number,
-    required: [true, 'An item must have a level']
+    required: [true, 'Equipment must have a level']
   },
   description: {
     type: String,
@@ -24,7 +24,7 @@ const equipmentSchema = new mongoose.Schema({
   },
   effects: {
     type: [Object],
-    required: [true, 'An item must have at least one effect']
+    required: [true, 'Equipment must have at least one effect']
   },
   conditions: String,
   createdAt: {

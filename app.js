@@ -5,7 +5,7 @@ const equipmentRouter = require('./routes/equipment.router')
 
 const app = express()
 
-if (process.env.NODE_ENV === 'development') {
+if (process.env.NODE_ENV === 'dev') {
   app.use(morgan('dev'))
 }
 
