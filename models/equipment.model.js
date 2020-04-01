@@ -3,7 +3,7 @@ const mongoose = require('mongoose')
 const equipmentSchema = new mongoose.Schema({
   id: {
     type: Number,
-    required: [true, 'A tour must have an ID']
+    required: [true, 'Equipment must have an ID']
   },
   url: {
     type: String,
